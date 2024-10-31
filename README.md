@@ -21,3 +21,9 @@ You can install the required libraries using pip:
 
 ```bash
 pip install beautifulsoup4 tqdm curl-cffi requests
+```
+##Usage
+To use ScrapMe, run the script from the command line with the required arguments. Here’s the general syntax:
+```bash
+python scrapme.py -query "<your_search_query>" -count <number_of_images> -output <output_folder>
+```
