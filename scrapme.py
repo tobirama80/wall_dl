@@ -35,8 +35,6 @@ class Downloader:
     def get_links(self):
         query = self.query.replace(" ", "+")
         response = requests.get(f"https://www.wallpaperflare.com/search?wallpaper={query}", impersonate='chrome')
-        with open('page.html', 'w',encoding='utf-8',errors='ignore') as f:
-            f.write(response.text)
         soup = BeautifulSoup(response.text, 'html.parser')
         links = soup.find_all('a', itemprop='url')
 
